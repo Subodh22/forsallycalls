@@ -60,7 +60,7 @@ export function FAQ() {
             </div>
           </div>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Got questions? We've got answers. Here's everything you need to know before getting started.
+            Got questions? We&apos;ve got answers. Here&apos;s everything you need to know before getting started.
           </p>
         </div>
         <div className="space-y-4">

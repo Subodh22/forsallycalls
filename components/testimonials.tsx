@@ -66,7 +66,7 @@ export function Testimonials() {
                   ))}
                 </div>
                 <p className="text-base mb-6 italic text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors">
-                  "{testimonial.quote}"
+                  &ldquo;{testimonial.quote}&rdquo;
                 </p>
                 <div className="border-t border-muted pt-4">
                   <p className="font-semibold text-base">{testimonial.author}</p>
