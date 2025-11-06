@@ -351,7 +351,7 @@ function CustomAgentsIllustration() {
 
 function InstantIllustration() {
   return (
-    <div className="relative w-full h-32 flex items-center justify-center">
+    <div className="relative w-full h-32 flex items-center justify-center overflow-hidden">
       <div className="relative w-full h-full flex items-center justify-center gap-3">
         {/* Lightning icon */}
         <motion.div
@@ -475,43 +475,6 @@ function SecureIllustration() {
             }}
           />
         </motion.div>
-        
-        {/* Security badges */}
-        {[
-          { angle: 45, distance: 45 },
-          { angle: -45, distance: 45 },
-          { angle: 135, distance: 45 },
-          { angle: -135, distance: 45 },
-        ].map((badge, i) => {
-          const x = Math.cos((badge.angle * Math.PI) / 180) * badge.distance;
-          const y = Math.sin((badge.angle * Math.PI) / 180) * badge.distance;
-          return (
-            <motion.div
-              key={i}
-              className="absolute w-5 h-5 rounded-full bg-green-500 flex items-center justify-center shadow-md"
-              style={{
-                left: `calc(50% + ${x}px)`,
-                top: `calc(50% + ${y}px)`,
-                transform: 'translate(-50%, -50%)',
-              }}
-              initial={{ scale: 0 }}
-              animate={{
-                scale: [0, 1.2, 1],
-              }}
-              transition={{
-                delay: 0.6 + i * 0.15,
-                duration: 0.5,
-                scale: {
-                  duration: 2,
-                  repeat: Infinity,
-                  delay: i * 0.3,
-                },
-              }}
-            >
-              <CheckCircle2 className="w-3 h-3 text-white" />
-            </motion.div>
-          );
-        })}
       </div>
     </div>
   );
@@ -617,7 +580,7 @@ export function Features() {
                 transition={{ delay: index * 0.1, duration: 0.6 }}
               >
                 <Card 
-                  className="border-0 bg-white/90 backdrop-blur-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover-lift overflow-hidden relative group"
+                  className="border-0 bg-white/90 backdrop-blur-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover-lift overflow-hidden relative group h-full flex flex-col"
                 >
                   {/* Gradient glow effect */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-lg blur-sm`}></div>
@@ -625,10 +588,10 @@ export function Features() {
                   {/* Top accent line */}
                   <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${feature.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                   
-                  <CardHeader className="pb-4 relative z-10">
+                  <CardHeader className="pb-4 relative z-10 flex-shrink-0">
                     {/* Visual Illustration - Clean animated style */}
                     <motion.div 
-                      className="mb-5 p-6 rounded-xl bg-gradient-to-br from-slate-50/80 to-white border border-slate-200/50 shadow-sm"
+                      className="mb-5 p-6 rounded-xl bg-gradient-to-br from-slate-50/80 to-white border border-slate-200/50 shadow-sm h-40 flex items-center justify-center"
                       whileHover={{ scale: 1.02 }}
                       transition={{ duration: 0.3 }}
                     >
@@ -640,14 +603,14 @@ export function Features() {
                     </CardTitle>
                   </CardHeader>
                   
-                  <CardContent className="relative z-10">
-                    <CardDescription className="text-sm leading-relaxed text-muted-foreground mb-5">
+                  <CardContent className="relative z-10 flex-grow flex flex-col">
+                    <CardDescription className="text-sm leading-relaxed text-muted-foreground mb-5 flex-grow">
                       {feature.description}
                     </CardDescription>
                     
                     {/* Dynamic Learn more link */}
                     <motion.div 
-                      className="flex items-center gap-2 text-sm font-semibold text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      className="flex items-center gap-2 text-sm font-semibold text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-auto"
                       whileHover={{ x: 5 }}
                     >
                       <span>Learn more</span>

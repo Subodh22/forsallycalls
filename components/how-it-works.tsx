@@ -6,23 +6,23 @@ import { Settings, Rocket, CheckCircle, Sparkles } from "lucide-react";
 
 const steps = [
   {
-    step: "01",
-    title: "Set Up Your Account",
-    description: "Create your account in minutes. No technical expertise required. Just provide your business details and preferences.",
+    step: "1",
+    title: "Discovery & Strategy",
+    description: "We'll identify your business goals, analyze communication challenges, and find inefficiencies to wireframe a tailored solution for your needs.",
     icon: Settings,
     gradient: "from-blue-500 to-cyan-500",
   },
   {
-    step: "02",
-    title: "Configure Your Agent",
-    description: "Customize Sally to match your brand voice and business needs. Set up call flows, responses, and integrations.",
+    step: "2",
+    title: "Creation & Launch",
+    description: "We'll develop, test and integrate a custom AI Voice Agent that seamlessly integrates with your existing systems and workflows.",
     icon: Settings,
     gradient: "from-purple-500 to-indigo-500",
   },
   {
-    step: "03",
-    title: "Start Receiving Calls",
-    description: "Sally goes live immediately. Start handling customer calls, answering questions, and providing support right away.",
+    step: "3",
+    title: "Optimize",
+    description: "We'll monitor, adjust and optimise your AI Voice Agent based on real-world data, ensuring consistent performance and outstanding results for your business.",
     icon: Rocket,
     gradient: "from-green-500 to-emerald-500",
   },
@@ -39,13 +39,13 @@ export function HowItWorks() {
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-purple-500/20 flex items-center justify-center border border-primary/20">
               <Sparkles className="w-5 h-5 text-primary" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold gradient-text">How It Works</h2>
+            <h2 className="text-4xl md:text-5xl font-bold gradient-text">Getting started is simple</h2>
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center border border-green-200/30">
               <CheckCircle className="w-5 h-5 text-green-600" />
             </div>
           </div>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Get started with Sally Calls in three simple steps
+            A simple, three step process to make your life easier.
           </p>
         </div>
         
