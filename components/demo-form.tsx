@@ -90,8 +90,8 @@ export function DemoForm() {
                 <Sparkles className="w-4 h-4 text-primary" />
               </div>
             </div>
-            <CardDescription className="text-lg">
-              To receive a demo call
+            <CardDescription className="text-lg text-center">
+              Our Agent will call you in less than 10 sec.
             </CardDescription>
           </CardHeader>
           <CardContent className="relative z-10">
