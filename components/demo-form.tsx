@@ -13,12 +13,33 @@ export function DemoForm() {
     phone: "",
     email: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Demo form submitted:", formData);
-    alert("Thank you! We'll call you soon to schedule a demo.");
-    setFormData({ name: "", phone: "", email: "" });
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch("https://bapi33.app.n8n.cloud/webhook-test/7e76b655-82c7-417d-be8b-d3a8b7e8d36f", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Thank you! We'll call you soon to schedule a demo.");
+        setFormData({ name: "", phone: "", email: "" });
+      } else {
+        throw new Error("Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("There was an error submitting your request. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -103,9 +124,9 @@ export function DemoForm() {
                   className="h-12 border-2 focus:border-primary transition-colors"
                 />
               </div>
-              <Button type="submit" size="lg" className="w-full h-12 text-lg bg-gradient-to-r from-primary to-purple-500 hover:from-primary/90 hover:to-purple-500/90 shadow-lg hover:shadow-xl transition-all">
+              <Button type="submit" size="lg" className="w-full h-12 text-lg bg-gradient-to-r from-primary to-purple-500 hover:from-primary/90 hover:to-purple-500/90 shadow-lg hover:shadow-xl transition-all" disabled={isSubmitting}>
                 <Send className="w-5 h-5 mr-2" />
-                Send
+                {isSubmitting ? "Sending..." : "Send"}
               </Button>
               <p className="text-xs text-center text-muted-foreground">
                 By clicking &apos;send&apos; you agree to receive autodialed calls & emails from{" "}

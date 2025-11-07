@@ -21,7 +21,7 @@ export function Hero() {
             <div className="space-y-6">
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tight">
                 <span className="block gradient-text">Never Miss</span>
-                <span className="block gradient-text-2">a Lead Again</span>
+                <span className="block gradient-text-2">a Call Again</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed font-medium">
@@ -32,7 +32,7 @@ export function Hero() {
             <div className="flex flex-wrap items-center gap-4">
               <Button asChild size="lg" className="text-lg px-10 py-6 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 shadow-xl hover:shadow-2xl hover-lift group font-semibold">
                 <Link href="#demo" className="flex items-center gap-2">
-                  Get Started
+                  Try it now
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
