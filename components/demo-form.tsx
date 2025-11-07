@@ -20,7 +20,7 @@ export function DemoForm() {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch("https://bapi33.app.n8n.cloud/webhook-test/7e76b655-82c7-417d-be8b-d3a8b7e8d36f", {
+      const response = await fetch("https://bapi33.app.n8n.cloud/webhook/7e76b655-82c7-417d-be8b-d3a8b7e8d36f", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
