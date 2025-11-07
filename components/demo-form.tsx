@@ -20,12 +20,23 @@ export function DemoForm() {
     setIsSubmitting(true);
     
     try {
+      // Format phone number: if it starts with 0, replace with +61
+      let formattedPhone = formData.phone.trim();
+      if (formattedPhone.startsWith("0")) {
+        formattedPhone = "+61" + formattedPhone.substring(1);
+      }
+      
+      const formDataToSend = {
+        ...formData,
+        phone: formattedPhone,
+      };
+      
       const response = await fetch("https://bapi33.app.n8n.cloud/webhook/7e76b655-82c7-417d-be8b-d3a8b7e8d36f", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formDataToSend),
       });
 
       if (response.ok) {
@@ -107,7 +118,7 @@ export function DemoForm() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="+1 (555) 123-4567"
+                  placeholder="0469004456 or +61469004456"
                   className="h-12 border-2 focus:border-primary transition-colors"
                 />
               </div>
