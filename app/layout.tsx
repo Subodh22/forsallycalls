@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Sally Calls - AI-Powered Voice Agent for Businesses",
   description: "Transform your business communication with intelligent voice agents that handle calls, answer questions, and provide exceptional customer service 24/7.",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
