@@ -71,7 +71,7 @@ export function CTA() {
             <div className="text-center">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-br from-primary/20 to-purple-500/20 border border-primary/20">
                 <Sparkles className="w-4 h-4 text-primary" />
-                <p className="text-sm font-semibold text-primary">35+ booked this month</p>
+                <p className="text-sm font-semibold text-primary">Get started today</p>
               </div>
             </div>
           </CardContent>

@@ -3,7 +3,6 @@ import { Stats } from "@/components/stats";
 import { ProblemSolution } from "@/components/problem-solution";
 import { Features } from "@/components/features";
 import { HowItWorks } from "@/components/how-it-works";
-import { Testimonials } from "@/components/testimonials";
 import { DemoForm } from "@/components/demo-form";
 import { FAQ } from "@/components/faq";
 import { CTA } from "@/components/cta";
@@ -16,7 +15,6 @@ export default function Home() {
       <ProblemSolution />
       <Features />
       <HowItWorks />
-      <Testimonials />
       <DemoForm />
       <FAQ />
       <CTA />

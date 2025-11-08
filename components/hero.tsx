@@ -2,26 +2,24 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Phone, Sparkles, Zap, ArrowRight, Play, CheckCircle2 } from "lucide-react";
+import { Phone, Sparkles, Zap, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative pt-40 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-screen flex items-center">
-      {/* No background - using unified site background */}
-
+    <section className="relative pt-40 pb-32 px-4 sm:px-6 lg:px-8 overflow-x-hidden overflow-y-visible min-h-screen flex items-center">
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Professional Content */}
-          <div className="text-left lg:text-left space-y-8">
+          <div className="text-left lg:text-left space-y-8 overflow-visible">
             <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm animate-fade-in-up hover-lift">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
               <span className="text-sm font-semibold text-primary tracking-wide">AI-Powered Voice Agent</span>
             </div>
             
             <div className="space-y-6">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tight">
-                <span className="block gradient-text">Never Miss</span>
-                <span className="block gradient-text-2">a Call Again</span>
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.4] tracking-tight pb-4 overflow-visible">
+                <span className="block gradient-text pb-1">Never Miss</span>
+                <span className="block gradient-text-2 pb-2">a Call Again</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed font-medium">
@@ -29,29 +27,16 @@ export function Hero() {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4">
-              <Button asChild size="lg" className="text-lg px-10 py-6 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 shadow-xl hover:shadow-2xl hover-lift group font-semibold">
+            <div className="flex flex-col gap-4">
+              <Button asChild size="lg" className="text-lg px-10 py-6 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 shadow-xl hover:shadow-2xl hover-lift group font-semibold w-fit">
                 <Link href="#demo" className="flex items-center gap-2">
                   Try it now
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-lg px-10 py-6 border-2 hover-lift group font-semibold">
-                <Link href="#features" className="flex items-center gap-2">
-                  <Play className="w-5 h-5" />
-                  Watch Demo
-                </Link>
-              </Button>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-6 pt-4">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <CheckCircle2 className="w-4 h-4 text-primary" />
-                <span className="font-medium">Trusted by 50+ companies</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20">
+              <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 w-fit">
                 <Phone className="w-4 h-4 text-green-600" />
-                <span className="text-sm font-semibold text-green-700">35+ booked this month</span>
+                <span className="text-sm font-semibold text-green-700">Setup in less than 24 hours</span>
               </div>
             </div>
           </div>

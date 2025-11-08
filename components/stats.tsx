@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { TrendingUp, Users, Target, ArrowUpRight, Zap } from "lucide-react";
+import { TrendingUp, Users, Target, ArrowUpRight, Zap, Clock } from "lucide-react";
 
 const stats = [
   {
@@ -33,11 +33,10 @@ export function Stats() {
       {/* No background - using unified site background */}
 
       <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-br from-primary/20 to-purple-500/20 border border-primary/20 mb-8">
-            <Zap className="w-5 h-5 text-primary" />
-            <p className="text-sm font-semibold text-primary tracking-wide">Trusted by 50+ companies</p>
-            <Zap className="w-5 h-5 text-primary" />
+        <div className="flex justify-center mb-16">
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-br from-primary/20 to-purple-500/20 border border-primary/20">
+            <Clock className="w-5 h-5 text-primary" />
+            <p className="text-sm font-semibold text-primary tracking-wide">24/7 AI Assistant</p>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
