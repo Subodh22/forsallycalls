@@ -6,12 +6,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Phone, Send, Sparkles } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea";
 
 export function DemoForm() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
+    company: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -41,7 +44,7 @@ export function DemoForm() {
 
       if (response.ok) {
         alert("Thank you! We'll call you soon to schedule a demo.");
-        setFormData({ name: "", phone: "", email: "" });
+        setFormData({ name: "", phone: "", email: "", company: "", message: "" });
       } else {
         throw new Error("Failed to submit form");
       }
@@ -53,7 +56,9 @@ export function DemoForm() {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -79,7 +84,7 @@ export function DemoForm() {
                 <Phone className="w-8 h-8 text-white" />
               </div>
             </div>
-            <div className="inline-flex items-center gap-3 mb-4">
+            <div className="flex justify-center items-center gap-3 mb-4">
               <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary/20 to-purple-500/20 flex items-center justify-center border border-primary/20">
                 <Sparkles className="w-4 h-4 text-primary" />
               </div>
@@ -91,7 +96,7 @@ export function DemoForm() {
               </div>
             </div>
             <CardDescription className="text-lg text-center">
-              Our Agent will call you in less than 10 sec.
+             Our agent will call you in less than 10 seconds
             </CardDescription>
           </CardHeader>
           <CardContent className="relative z-10">
@@ -135,12 +140,36 @@ export function DemoForm() {
                   className="h-12 border-2 focus:border-primary transition-colors"
                 />
               </div>
+              <div className="space-y-2">
+                <Label htmlFor="demo-company" className="text-base font-medium">Company</Label>
+                <Input
+                  id="demo-company"
+                  name="company"
+                  type="text"
+                  value={formData.company}
+                  onChange={handleChange}
+                  placeholder="Your company"
+                  className="h-12 border-2 focus:border-primary transition-colors"
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="demo-message" className="text-base font-medium">Message</Label>
+                <Textarea
+                  id="demo-message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Tell us about your needs..."
+                  rows={4}
+                  className="border-2 focus:border-primary transition-colors resize-none"
+                />
+              </div>
               <Button type="submit" size="lg" className="w-full h-12 text-lg bg-gradient-to-r from-primary to-purple-500 hover:from-primary/90 hover:to-purple-500/90 shadow-lg hover:shadow-xl transition-all" disabled={isSubmitting}>
                 <Send className="w-5 h-5 mr-2" />
-                {isSubmitting ? "Sending..." : "Send"}
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
               <p className="text-xs text-center text-muted-foreground">
-                By clicking &apos;send&apos; you agree to receive autodialed calls & emails from{" "}
+                By clicking &apos;Send Message&apos; you agree to receive autodialed calls & emails from{" "}
                 <span className="font-semibold text-primary">Sally Calls</span> and agree to our{" "}
                 <a href="#" className="underline hover:text-primary transition-colors">Privacy Policy</a>.
               </p>

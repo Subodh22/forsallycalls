@@ -29,10 +29,6 @@ const faqs = [
     question: "Can You Make Edits to the Agents?",
     answer: "Absolutely! We can make edits, updates, and improvements to your AI agents at any time. Changes can be implemented quickly, often within 24-48 hours depending on complexity.",
   },
-  {
-    question: "How Much Does Development Cost?",
-    answer: "Pricing varies based on your specific needs, complexity, and scale. We offer flexible pricing plans to fit businesses of all sizes. Contact us for a custom quote tailored to your requirements.",
-  },
 ];
 
 export function FAQ() {
