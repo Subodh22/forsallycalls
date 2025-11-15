@@ -34,7 +34,7 @@ export function DemoForm() {
         phone: formattedPhone,
       };
       
-      const response = await fetch("https://forsallycalls.duckdns.org/webhook/b1d8329f-0347-42e2-a99c-5666ca477b21", {
+      const response = await fetch("/api/webhook", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
