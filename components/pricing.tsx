@@ -7,19 +7,34 @@ import { Check, Sparkles, Zap } from "lucide-react";
 
 const pricingPlans = [
   {
-    name: "Starter",
+    name: "Pay as You Go",
     price: "$0.25",
     period: "/call",
     payAsYouGo: true,
-    description: "Perfect for small businesses getting started",
+    description: "Perfect for trying out our service",
     features: [
-      "Pay as you go pricing",
+    
       "AI voice agent",
       "Basic call routing",
       "Calendar integration",
-      "Email notifications",
+    ],
+    gradient: "from-blue-500 to-cyan-500",
+    popular: false,
+  },
+  {
+    name: "Starter",
+    price: "$199",
+    period: "/month",
+    description: "Perfect for small businesses getting started",
+    features: [
+      "400 calls/month",
+      "AI voice agent",
+      "Basic call routing",
+      "Calendar integration",
+      "CRM Integration",
+      "Custom Dashboard",
       "Basic analytics",
-      "Email support",
+
     ],
     gradient: "from-blue-500 to-cyan-500",
     popular: false,
@@ -83,7 +98,7 @@ export function Pricing() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
@@ -98,7 +113,7 @@ export function Pricing() {
                 </div>
               )}
               <Card 
-                className={`border-0 bg-white/90 backdrop-blur-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover-lift overflow-hidden relative group h-full ${
+                className={`border-0 bg-white/90 backdrop-blur-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover-lift overflow-hidden relative group h-full flex flex-col ${
                   plan.popular ? 'ring-2 ring-primary/50' : ''
                 }`}
               >
@@ -137,8 +152,8 @@ export function Pricing() {
                   </div>
                 </CardHeader>
                 
-                <CardContent className="relative z-10">
-                  <ul className="space-y-4 mb-8">
+                <CardContent className="relative z-10 flex-1 flex flex-col">
+                  <ul className="space-y-4 mb-8 flex-1">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <div className="relative mt-0.5 flex-shrink-0">
@@ -156,13 +171,13 @@ export function Pricing() {
                   <Button 
                     asChild 
                     size="lg" 
-                    className={`w-full text-lg ${
+                    className={`w-full text-lg mt-auto ${
                       plan.popular 
                         ? 'bg-gradient-to-r from-primary to-purple-500 hover:from-primary/90 hover:to-purple-500/90 shadow-lg hover:shadow-xl' 
                         : 'bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-600 hover:to-gray-800'
                     } transition-all`}
                   >
-                    <Link href="/#demo">
+                    <Link href="/demo">
                       {plan.price === "Custom" ? "Contact Sales" : "Get Started"}
                     </Link>
                   </Button>

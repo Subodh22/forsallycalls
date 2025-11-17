@@ -62,7 +62,7 @@ export function CTA() {
             </div>
             <div className="flex justify-center mb-6">
               <Button asChild size="lg" className="text-lg px-8 bg-gradient-to-r from-primary to-purple-500 hover:from-primary/90 hover:to-purple-500/90 shadow-lg hover:shadow-xl transition-all">
-                <Link href="#demo">Book a Demo</Link>
+                <Link href="/demo">Book a Demo</Link>
               </Button>
             </div>
             <div className="text-center">

@@ -54,7 +54,7 @@ export function Navigation() {
               })}
             </div>
             <Button asChild size="lg" className="bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 shadow-md hover:shadow-lg hover-lift font-semibold px-6">
-              <Link href="#demo">Book a Demo</Link>
+              <Link href="/demo">Book a Demo</Link>
             </Button>
           </div>
         </div>
