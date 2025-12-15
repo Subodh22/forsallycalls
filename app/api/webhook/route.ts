@@ -5,7 +5,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     
     // Forward the request to the webhook URL
-    const webhookUrl = 'https://forsallycalls.duckdns.org/webhook/b1d8329f-0347-42e2-a99c-5666ca477b21';
+    const webhookUrl = 'https://sallycallsnow.duckdns.org/webhook/a89a1aed-bb18-493d-87ef-2bbf52cdb9cb';
     
     const response = await fetch(webhookUrl, {
       method: 'POST',
