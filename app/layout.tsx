@@ -41,6 +41,9 @@ export default function RootLayout({
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-muted-foreground">
               <p>&copy; {new Date().getFullYear()} Sally Calls. All rights reserved.</p>
               <div className="flex gap-6 text-sm">
+                <a href="/terms" className="hover:text-primary transition-colors underline-offset-4 hover:underline">
+                  Terms of Service
+                </a>
                 <a href="/privacy" className="hover:text-primary transition-colors underline-offset-4 hover:underline">
                   Privacy Policy
                 </a>
