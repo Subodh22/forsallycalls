@@ -54,7 +54,7 @@ export default function PrivacyPolicyPage() {
               <div className="bg-slate-50 p-4 rounded-lg border border-slate-200">
                 <p><strong>Business Name:</strong> Sally Calls</p>
                 <p><strong>Location:</strong> Australia</p>
-                <p><strong>Contact Email:</strong> privacy@sallycalls.com</p>
+                <p><strong>Contact Email:</strong> subodhmaharjan3@gmail.com</p>
               </div>
             </CardContent>
           </Card>
@@ -262,7 +262,7 @@ export default function PrivacyPolicyPage() {
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>Clicking the unsubscribe link in our emails</li>
-                <li>Contacting us directly at privacy@sallycalls.com</li>
+                <li>Contacting us directly at subodhmaharjan3@gmail.com</li>
                 <li>Informing our AI agent during a call</li>
               </ul>
             </CardContent>
@@ -364,7 +364,7 @@ export default function PrivacyPolicyPage() {
               <div className="bg-slate-50 p-4 rounded-lg border border-slate-200 space-y-2">
                 <p className="flex items-center gap-2">
                   <Mail className="w-4 h-4 text-primary" />
-                  <strong>Email:</strong> privacy@sallycalls.com
+                  <strong>Email:</strong> subodhmaharjan3@gmail.com
                 </p>
                 <p className="flex items-center gap-2">
                   <Phone className="w-4 h-4 text-primary" />
