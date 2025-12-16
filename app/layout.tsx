@@ -37,8 +37,18 @@ export default function RootLayout({
         <Navigation />
         <main className="min-h-screen overflow-x-hidden relative z-10">{children}</main>
         <footer className="border-t py-8 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="container mx-auto max-w-6xl text-center text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} Sally Calls. All rights reserved.</p>
+          <div className="container mx-auto max-w-6xl">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-muted-foreground">
+              <p>&copy; {new Date().getFullYear()} Sally Calls. All rights reserved.</p>
+              <div className="flex gap-6 text-sm">
+                <a href="/privacy" className="hover:text-primary transition-colors underline-offset-4 hover:underline">
+                  Privacy Policy
+                </a>
+                <a href="/contact" className="hover:text-primary transition-colors underline-offset-4 hover:underline">
+                  Contact
+                </a>
+              </div>
+            </div>
           </div>
         </footer>
       </body>

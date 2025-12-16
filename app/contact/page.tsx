@@ -170,7 +170,7 @@ export default function ContactPage() {
                   <p className="text-xs text-center text-muted-foreground">
                     By clicking &apos;Send Message&apos; you agree to receive emails from{" "}
                     <span className="font-semibold text-primary">Sally Calls</span> and agree to our{" "}
-                    <a href="#" className="underline hover:text-primary transition-colors">Privacy Policy</a>.
+                    <a href="/privacy" className="underline hover:text-primary transition-colors">Privacy Policy</a>.
                   </p>
                 </form>
               </CardContent>
